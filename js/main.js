@@ -17,13 +17,9 @@ window.onclick = function(event) {
 	}
 }
 
-// Botones text1, text2, text3
+// Botones spring 1, spring 2, spring 3
 var mostarOcultar = function(divtexte) {
 	var divtext = document.getElementById(divtexte);
-  var text1 = document.getElementById("text1");
-  var text2 = document.getElementById("text2");
-  var text3 = document.getElementById("text3");
-
 	if (divtext.id == "text1"  ) {
     divtext.style.display ="block";
 		text3.style.display = "none";
