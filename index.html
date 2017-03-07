@@ -10,11 +10,11 @@
 </head>
 <body>
   <header align="right">
-    <div class="dropdown">
+    <div class="dropdown">Hola coder
           <label id="nom"></label>
         	<button onclick="myFunction()" class="dropbtn">&#9776;</button>
         	<div id="myDropdown" class="dropdown-content">
-        		<a href="coders.html">Coders</a>
+        		<a href="coders.html" id="coders">Coders</a>
         		<a href="logout.html">Salir</a>
           </div>
 
@@ -87,12 +87,22 @@
 
     <script src="js/main.js"></script>
     <script>
-      var nom = prompt("¿Cuál es tu nombre?");
-      while(nom=="" || nom==null)
-      {
-        nom = prompt("Ingrese su nombre por favor");
-      }
-      document.getElementById("nom").textContent = "Hola coder " + nom;
+
+      var myParam = location.search.split('nombre=')[1];
+        var saludo = document.getElementById("nom");
+        if (myParam == undefined) {
+            var nom = prompt('¿Cual es tu nombre?');
+            while(nom=="" || nom==null)
+            {
+              nom = prompt("Ingrese su nombre por favor");
+            }
+            saludo.textContent = nom;
+        } else {
+            saludo.textContent = myParam;
+        }
+        document.getElementById("coders").addEventListener('click',function() {
+        this.href += "?nombre="+saludo.textContent;
+        })
     </script>
 </body>
 </html>
