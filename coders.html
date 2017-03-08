@@ -26,7 +26,11 @@
 
     var coder ="";
     coders.forEach(function(e){
-      coder +="<div class=div-coder><p>"+e.nombre+"</p><p>"+e.apellido+"</p><p>"+e.promocion+"</p><p>"+e.estado+"</p></div>";
+      coder +="<div class=div-coder><p>"+
+              "Nombre: "+e.nombre+"</p><p>"+
+              "Apellido: "+e.apellido+"</p><p>"+
+              "Promocion: "+e.promocion+"</p><p>"+
+              "Estado: "+e.estado+"</p></div>";
     });
     document.getElementById("coders").innerHTML = coder;
 

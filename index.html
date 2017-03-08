@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
 </head>
 <body>
+
   <header align="right">
     <div class="dropdown">Hola coder
           <label id="nom"></label>
@@ -23,6 +24,7 @@
 
     </div>
     </header>
+
     <center><img src="img/logo.svg" alt="Laboratoria" width="40%"></center>
     <div class="contenedor-contenido-pagina">
           <h2>¿Qué es laboratoria?</h2>
@@ -32,6 +34,7 @@
         <input type="button" value="Sprint 2" id="b2" onclick="mostarOcultar('text2')">
         <input type="button" value="Sprint 3" id="b3" onclick="mostarOcultar('text3')">
         <br/><br/>
+        <!-- Hide the sprint-1-->
         <div id="text1">
           <h3> Sprint 1: Introducción a Javascript</h3>
           <ol><li>Fundamentos de Programación</li>
@@ -41,6 +44,7 @@
           </ol>
           <hr>
           <h3>Quiz</h3>
+
             <div id="quiz1">
               <h4>Existen dos tipos de funciones</h4>
                 <input type="radio" name="p1" >Expresadas y declaradas</input><br/>
@@ -56,7 +60,10 @@
                 <input type="radio" name="p3">propiedades y valores</input><br/><br/>
               <button id="bt1">ENVIAR</button>
             </div>
+
         </div>
+
+        <!-- hide the sprin-2 -->
         <div id="text2">
           <h3> Sprint 2: Introducción al desarrollo web y contrucción de páginas web</h3>
           <ol><li>Ciclo de vida del desarrollo web y arquitectura básica cliente / servidor / Configuración del ambiente de trabajo e introducción a git</li>
@@ -66,6 +73,7 @@
           </ol>
           <hr>
           <h3>Quiz</h3>
+
           <div id="quiz2">
             <h4>¿Cuál es el comando para iniciar un repositorio desde la consola</h4>
             <input type="radio" name="p4">git init .</input><br/>
@@ -81,7 +89,10 @@
             <input type="radio" name="p6">Document Obsolet Model</input><br/><br/>
             <button id="bt2">ENVIAR</button>
         </div>
+
         </div>
+
+
         <div id="text3">
           <h3>Sprint 3</h3>
           <p>No hay lecciones (Todavía)</p>
@@ -89,23 +100,8 @@
     </div>
 
     <script src="js/main.js"></script>
-    <script>
 
-      var myParam = location.search.split('nombre=')[1];
-        var saludo = document.getElementById("nom");
-        if (myParam == undefined) {
-            var nom = prompt('¿Cual es tu nombre?');
-            while(nom=="" || nom==null)
-            {
-              nom = prompt("Ingrese su nombre por favor");
-            }
-            saludo.textContent = nom;
-        } else {
-            saludo.textContent = myParam;
-        }
-        document.getElementById("coders").addEventListener('click',function() {
-        this.href += "?nombre="+saludo.textContent;
-        })
-    </script>
+
+
 </body>
 </html>
